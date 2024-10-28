@@ -1,0 +1,429 @@
+/* Allgemeine Stile für die Webseite */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #121212;
+    color: #f1f1f1;
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: url('../img/imagesNATO/natoBG.png') center/cover no-repeat fixed;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    color: #e0e0e0;
+}
+
+h1, h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.header-container h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #ff4545;
+    text-shadow: 0 0 15px #ff4545, 0 0 30px #8b0000, 0 0 45px black;
+    margin-top: 50px;
+    animation: pulsate 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulsate {
+    0% { text-shadow: 0 0 15px #ff4545, 0 0 30px #8b0000; }
+    100% { text-shadow: 0 0 25px #ff4545, 0 0 40px #8b0000; }
+}
+
+.glow-text {
+    color: #ff4545;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 0px 0px 10px #ff4545, 0px 0px 20px #8b0000;
+    animation: glowEffect 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowEffect {
+    0% { text-shadow: 0 0 10px #ff4545, 0 0 20px #8b0000; }
+    100% { text-shadow: 0 0 25px #ff4545, 0 0 35px #8b0000; }
+}
+
+.top-nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #151515;
+    padding: 15px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #ff4545;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.top-nav ul li {
+    margin: 0 20px;
+}
+
+.top-nav ul li a {
+    color: #ff4545;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.top-nav ul li a:hover {
+    background-color: #8b0000;
+    color: white;
+    border: 2px solid #ff4545;
+}
+
+.return-button {
+    background-color: #481717;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.return-button:hover {
+    background-color: #8b0000;
+    color: #ffffff;
+}
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1 1 400px;
+    padding: 10px;
+}
+
+.flex-item img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 0 20px rgba(255, 69, 69, 0.7);
+}
+
+.flex-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(255, 69, 69, 0.9);
+}
+
+.team-container, .gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 0 50px;
+}
+
+.team-photo, .gallery-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    border: 3px solid #ff4545;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.team-photo:hover, .gallery-image:hover {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0 0 30px #ff4545;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding: 60px 30px;
+    background-color: rgba(20, 20, 20, 0.9);
+    border-left: 6px solid #ff4545;
+    border-right: 6px solid #ff4545;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff4545;
+    text-shadow: 0 0 10px #8b0000;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(50, 50, 50, 0.9);
+    border-radius: 10px;
+    border: 2px solid #ff4545;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    border: 2px solid #ff4545;
+    color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #8b0000;
+    box-shadow: 0 0 10px #ff4545;
+}
+
+.contact-form button {
+    background-color: #ff4545;
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.contact-form button:hover {
+    background-color: #8b0000;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-image {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 5px 0;
+    color: rgb(85, 85, 85);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Tarot-Karten Grundstil */
+.tarot-card {
+    width: 300px;
+    height: 500px;
+    perspective: 1000px;
+    margin: 20px;
+    
+    position: relative;
+    display: inline-block;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background: none; /* Entfernt unerwünschte Hintergründe */
+}
+
+.tarot-card:hover {
+    transform: scale(1.2); /* Sanfte Vergrößerung beim Hover */
+    box-shadow: none !important; /* Entfernt alle Hover-Schatten */
+    background: none !important; /* Verhindert jegliche Hintergrundfarbe */
+}
+
+/* Tarot-Karten-Inneres */
+.tarot-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+  
+}
+
+.tarot-card:hover .tarot-card-inner {
+    transform: rotateY(180deg); /* Drehen der Karte */
+    box-shadow: none; /* Entfernt Hover-Schatten */
+}
+
+/* Vorder- und Rückseite */
+.tarot-card-front, .tarot-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 0, 0, 0.785); /* Elegante, dunklere Ränder */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4); /* Tieferer Schatten für eine luxuriösere Optik */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Stellt sicher, dass das Element sichtbar bleibt */
+    background: none; /* Kein Hintergrund */
+}
+
+/* Karten Hover Effekt */
+.tarot-card:hover .tarot-card-front,
+.tarot-card:hover .tarot-card-back {
+    box-shadow: none; /* Entfernt Hover-Schatten, die nicht benötigt werden */
+}
+
+/* Vorderseite */
+.tarot-card-front {
+    z-index: 2;
+    padding: 20px;
+    background: url('../img/imagesNATO/oldpapertexture.jpg') center/cover;
+    background-blend-mode: overlay;
+    opacity: 0.9; /* Leicht sichtbare Papierstruktur */
+}
+
+.tarot-card-front img {
+    width: 80%;
+    margin-top: -80px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 3px solid #000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Kräftigerer Rahmen für das Bild */
+}
+
+.tarot-card-front h3 {
+    font-size: 2rem;
+    font-family: 'Cinzel', serif;
+    color: #000000; /* Dunkles Grau für Eleganz */
+    text-shadow: 0px 2px 6px rgba(200, 43, 43, 0.614);
+    letter-spacing: 1px;
+    background-color: rgba(130, 130, 130, 0.716);
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid #000000; /* Dezente Linie oben */
+}
+
+/* Rückseite */
+.tarot-card-back {
+    transform: rotateY(180deg);
+    background: none; /* Entfernt den Farbverlauf und den weißen Filter */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+    background-blend-mode: normal; /* Setzt den Blend-Modus auf normal */
+}
+
+.tarot-card-back p {
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    color: #8c8c8c; /* Angenehmes, kontrastreiches Grau */
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background: rgb(0, 0, 0); /* Weißer Hintergrund für bessere Lesbarkeit */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Verwitterte Ränder */
+.tarot-card-front:before, .tarot-card-back:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/imagesNATO/oldpapertexture.jpg') center/cover;
+    filter: sepia(50%) brightness(1);
+    pointer-events: none;
+    opacity: 0.6; /* Weniger transparent für stärkeren Effekt */
+    z-index: -1;
+}
+
+/* Karten-Innenleben Hover Effekt */
+.tarot-card-inner:hover {
+    box-shadow: none; /* Entfernt Schatten beim Hover, die nicht gewünscht sind */
+}
+
+/* Charakter-Container */
+.character-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 0 50px;
+}
+
+.ornament {
+    width: 80px; /* Adjust the size to fit the card */
+    position: relative;
+    top: -30px; /* Move the ornament upwards */
+    margin-bottom: 0; /* Remove bottom margin */
+    border: none !important; /* Remove any border */
+    box-shadow: none !important; /* Remove any shadow */
+    display: block; /* Ensure proper block-level display */
+    margin-left: auto;
+    margin-right: auto; /* Center the ornament */
+    background: none; /* Ensure no background color */
+    outline: none; /* Ensure there's no outline */
+    padding: 0;
+}
+
+/* Spezifische Monster-Karten-Stile mit blutigen Rändern */
+.monster-card .tarot-card-front:before, .monster-card .tarot-card-back:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/imagesNATO/bloodtexture.png') center/cover; /* Blutige Textur */
+    filter: contrast(1.2) brightness(0.9); /* Stärkerer Kontrast und leichte Abdunkelung */
+    pointer-events: none;
+    opacity: 0.7; /* Sichtbarere blutige Textur */
+    z-index: -1;
+}
+

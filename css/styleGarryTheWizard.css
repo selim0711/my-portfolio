@@ -1,0 +1,502 @@
+/* Grundlegendes Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, rgb(32, 71, 32), rgb(7, 49, 2), rgb(24, 128, 24), green);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/* Retro Font */
+.header-container h1, 
+.text-style, 
+section h2, 
+p, 
+.team-member h3 {
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+/* Animierter Farbverlauf */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#extra-page {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    border: 8px solid #eaeaea; /* Border vergrößert auf 8px */
+    flex-grow: 1;
+    min-height: 100vh; /* Stellt sicher, dass extra-page mindestens die volle Höhe hat */
+}
+
+/* Kontaktformular Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #1d3557;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: 2px solid #ff6b6b;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: box-shadow 0.2s;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    box-shadow: 0px 0px 5px rgba(50, 205, 50, 0.7);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: white;
+    border: 2px solid #318fb5;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-form button:hover {
+    background-position: right center;
+    color: #ffe066;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Header Styling */
+.header-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-container h1 {
+    font-size: 3rem;
+    color: #ff6b6b;
+}
+
+/* Glühender Text */
+.glow-text {
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: lightgreen;
+    text-shadow: 0px 0px 8px lightgreen, 0px 0px 15px darkgreen;
+    animation: glowAnimation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowAnimation {
+    0% { text-shadow: 0px 0px 8px green, 0px 0px 15px darkgreen; }
+    100% { text-shadow: 0px 0px 12px lightgreen, 0px 0px 25px darkgreen; }
+}
+
+/* Button Navigation */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.text-style {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0.5rem;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: white;
+    border: 2px solid #318fb5;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background-position 0.5s;
+}
+
+.text-style:hover {
+    background-position: right center;
+    color: #ffe066;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Abschnitt-Styling */
+section {
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-left: 6px solid #ff6b6b;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #1d3557;
+    text-transform: uppercase;
+    border-bottom: 2px solid #457b9d;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Textblock */
+p {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Flex Layout für Text und Bilder */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item {
+    flex: 1 1 300px;
+    max-width: 45%;
+    padding: 10px;
+}
+
+.flex-item img, .gallery-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    border: 2px solid #ff6b6b;
+    position: relative;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.flex-item img:hover, .gallery-image:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 20px rgba(255, 108, 108, 0.7);
+}
+
+/* Team-Abschnitt */
+.team-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    width: 200px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #ff6b6b;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 108, 108, 0.7);
+}
+
+/* Galerie */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.gallery-image {
+    width: calc(50% - 1rem);
+    max-width: 400px;
+    border-radius: 8px;
+    border: 2px solid #ff6b6b;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(255, 108, 108, 0.3);
+}
+
+/* Charaktere & Gegner Abschnitt */
+.character-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        rgba(0, 0, 0, 0) 2px
+    );
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.character-card {
+    max-width: 300px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    border: 4px dashed #1d3557;
+    box-shadow: 4px 4px 0px #666;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 0px #ff6b6b;
+    background-color: rgba(61, 123, 61, 0.344); /* Färbung bei Hover */
+}
+
+.character-image {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px lightgreen, 0 0 20px darkgreen;
+}
+
+.character-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px lightgreen, 0 0 30px green;
+}
+
+.character-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.character-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Boss-Karte */
+.boss-card {
+    background: linear-gradient(135deg, #FFD700, #FFA500); /* Goldener Hintergrund */
+    border: 4px solid #FFD700;
+    box-shadow: 0px 0px 15px 5px rgba(255, 215, 0, 0.8), 0px 0px 30px rgba(255, 165, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boss-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px 10px rgba(255, 215, 0, 1), 0px 0px 40px rgba(255, 165, 0, 0.9);
+}
+
+.boss-card h3 {
+    font-size: 1.5rem;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-shadow: 0px 0px 8px #FFA500, 0px 0px 15px #FFD700;
+}
+
+.boss-card p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Mystery Card */
+.mystery-card {
+    filter: grayscale(100%); /* Graustufen */
+    opacity: 0.7; /* Durchsichtigkeit */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.mystery-card:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.mystery-card h3 {
+    color: #999; /* Blassere Farbe für mysteriösen Charakter */
+}
+
+.mystery-card p {
+    color: #777;
+}
+
+/* Gegner Karten: Feuer, Eis, Pflanze, Stein */
+.fire-card {
+    background: linear-gradient(135deg, #ff5e5e, #ff0000); /* Roter Verlauf */
+    border: 4px dashed #b6390b;
+    box-shadow: 6px 6px 0px #b6390b, 0px 0px 20px rgba(255, 140, 0, 0.6);
+}
+
+.fire-card h3 {
+    color: #9c340e;
+    text-shadow: 0px 0px 8px #ff8c00, 0px 0px 15px #ff4500;
+}
+
+.fire-card p {
+    color: #ffe5e5;
+}
+
+.ice-card {
+    background: linear-gradient(135deg, #5ecfff, #00aaff); /* Blauer Verlauf */
+    border: 4px dashed #1e90ff;
+    box-shadow: 6px 6px 0px rgba(30, 144, 255, 0.8), 0px 0px 20px rgba(135, 206, 250, 0.6);
+}
+
+.ice-card h3 {
+    color: #1e90ff;
+    text-shadow: 0px 0px 8px #87cefa, 0px 0px 15px #1e90ff;
+}
+
+.ice-card p {
+    color: #e0f7ff;
+}
+
+.plant-card {
+    background: linear-gradient(135deg, #98ff98, #32cd32); /* Grüner Verlauf */
+    border: 4px dashed #228b22;
+    box-shadow: 6px 6px 0px rgba(34, 139, 34, 0.8), 0px 0px 20px rgba(50, 205, 50, 0.6);
+}
+
+.plant-card h3 {
+    color: #228b22;
+    text-shadow: 0px 0px 8px #32cd32, 0px 0px 15px #228b22;
+}
+
+.plant-card p {
+    color: #eaffea;
+}
+
+.stone-card {
+    background: linear-gradient(135deg, #d3d3d3, #a9a9a9); /* Grauer Verlauf */
+    border: 4px dashed #696969;
+    box-shadow: 6px 6px 0px rgba(105, 105, 105, 0.8), 0px 0px 20px rgba(169, 169, 169, 0.6);
+}
+
+.stone-card h3 {
+    color: #696969;
+    text-shadow: 0px 0px 8px #a9a9a9, 0px 0px 15px #696969;
+}
+
+.stone-card p {
+    color: #f0f0f0;
+}
+
+/* Styling für die Top-Navigation */
+.top-nav {
+    background-color: rgba(32, 32, 32, 0.9);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Leichter Schatten */
+}
+
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Abstände zwischen den Links */
+}
+
+.top-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.top-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Leichtes Hintergrundfarbe beim Hover */
+}
+
+/* Styling für den "Zurück zur Hauptseite"-Button */
+.return-button {
+    background-color: #FF4500; /* Auffälliges Orange */
+    color: #fff;
+    border: 2px solid #FF6347;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #FF6347; /* Hellere Farbe beim Hover */
+    transform: translateY(-2px); /* Leichtes Anheben beim Hover */
+}
